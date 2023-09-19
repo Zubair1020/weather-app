@@ -5,10 +5,6 @@ async function makeWeatherApiRequest(cityName) {
   try {
     const res = await fetch(url);
     if (!res.ok) {
-      const weatherApiError = {
-        errorMessage: `Weather API request failed with status ${res.status}`,
-        errorStatus: res.status,
-      };
       throw {
         message: `Weather API request failed with status ${res.status}`,
         status: res.status,
@@ -21,6 +17,7 @@ async function makeWeatherApiRequest(cityName) {
     throw error;
   }
 }
+
 //accessing only the city names;
 async function makeCountryApiRequest() {
   try {
@@ -126,7 +123,7 @@ function initializeApp() {
 
   function handelSubmit(event) {
     event.preventDefault();
-    //select the input value form the form vai input name
+    //select the input value from the (form = this) vai input name
     const cityName = this.searchBarInput.value.trim();
 
     if (!cityName) {
