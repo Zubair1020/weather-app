@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="images/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Weather app</title>
+  </head>
+  <body class="flex-center">
+    <main class="weather-card flex-center">
+      <form class="search-bar">
+        <div class="search-bar__input-wrapper">
+          <input
+            id="search-bar-input"
+            class="search-bar__input"
+            name="searchBarInput"
+            placeholder="Enter your city name"
+            aria-autocomplete="list"
+            aria-labelledby="search-bar-input"
+            aria-haspopup="true"
+            spellcheck="false"
+            autocomplete="off"
+            type="search"
+          />
+          <ul
+            class="search-bar__suggestions"
+            role="listbox"
+          >
+            <!-- <li class="search-bar__suggestion">Hello world 1</li> -->
+          </ul>
+        </div>
+        <button class="search-bar__btn">
+          <img
+            class="search-bar__btn-icon"
+            src="images/search.png"
+            alt="search bar icon"
+          />
+        </button>
+      </form>
+      <p class="weather-card__weather-description">clear sky</p>
+      <div class="weather-card__weather-image"></div>
+
+      <div class="weather-card__weather-info">
+        <h1 class="weather-card__temperature">
+          <span class="weather-card__temperature-value">20</span>&deg;c
+        </h1>
+        <h2 class="weather-card__location">
+          <span class="weather-card__city">Dhaka</span>,
+          <span class="weather-card__country">BD</span>
+        </h2>
+      </div>
+      <div class="weather-card__additional-info">
+        <div class="weather-card__info">
+          <img
+            class="weather-card__info-icon"
+            src="images/humidity.png"
+            alt="humidity icon"
+          />
+          <div class="weather-card__info-content">
+            <h3 class="weather-card__info-text">
+              <span class="weather-card__humidity-text-value">60</span>%
+            </h3>
+            <h3 class="weather-card__info-text">Humidity</h3>
+          </div>
+        </div>
+        <div class="weather-card__info">
+          <img
+            class="weather-card__info-icon"
+            src="images/wind.png"
+            alt="wind icon"
+          />
+          <div class="weather-card__info-content">
+            <h3 class="weather-card__info-text">
+              <span class="weather-_wind-text-value">120</span>km/h
+            </h3>
+            <h3 class="weather-card__info-text">Wind Speed</h3>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
