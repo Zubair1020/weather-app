@@ -135,6 +135,7 @@ function initializeApp() {
         updateUiWithWeatherData(weatherData, uiElements);
         this.searchBarInput.value = "";
         uiElements["suggestionsElement"].innerHTML = "";
+        uiElements["inputWrapperElement"].classList.remove("active");
       })
       .catch((error) => {
         switch (error.status) {
